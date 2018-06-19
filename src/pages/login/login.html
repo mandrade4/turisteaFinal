@@ -1,0 +1,165 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="regresar()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="login-content">
+
+    <!-- Logo -->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      
+      <h2 ion-text class="text-primary">
+        Bienvenido a TuristeaPe!
+      </h2>
+    </div>
+
+    <!-- Login form -->
+    <!-- <ion-list>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          Email
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="correo" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+          Contrasena
+        </ion-label>
+        <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
+      </ion-item>
+      
+    </ion-list> -->
+    
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          Email
+        </ion-label>
+        <ion-input type="email" [(ngModel)]="correo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+          Password
+        </ion-label>
+        <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
+      </ion-item>
+    
+
+    <p text-right ion-text color="dark" tappable (click)="forgotPass()" ><strong>Olvidaste tu contrasena?</strong></p>
+
+    <div>
+      <button ion-button icon-start block color="dark" tappable color="blue" (click)="ingresar()">
+        <ion-icon name="log-in"></ion-icon>
+        INICIAR SESION
+      </button>
+
+      <p text-center ion-text color="dark">O inicia sesion con:</p>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            <button ion-button icon-only block color="facebook" class="btn-facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-4>
+            <button ion-button icon-only block class="btn-twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-4>
+            <button ion-button icon-only block color="danger" class="btn-gplus">
+              <ion-icon name="logo-googleplus"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </div>
+
+
+    <!-- Other links -->
+    <div text-center margin-top>
+      <span ion-text color="dark" tappable (click)="register()">Nuevo aqui? <strong>Registrate</strong></span>
+    </div>
+
+  </div>
+</ion-content>
+<!--<ion-content class="background" >
+  
+  <ion-img width="130" height="130" src="./../assets/imgs/Logo_AranzaGroup.png"></ion-img>
+  
+  <ion-card>
+
+    <ion-card-header>
+      LOGIN
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-list inset>
+
+          <ion-list>
+              
+            <ion-item>
+              <ion-label stacked>Username</ion-label>
+              <ion-input type="text" [(ngModel)]="correo" ></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label stacked>Password</ion-label>
+              <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
+            </ion-item>
+
+            <ion-item class="item-icon-right">
+                <p>Forgot Password? 
+                  <button ion-button color="purple" size="12" clear small
+                  (click)="navigateForgetPassword()">
+                    <a>Get here</a>
+                  </button>
+                </p>
+            </ion-item>
+            <button ion-button color="jade" 
+              (click)="ingresar()"
+              [disabled]="correo.length<5 || contrasena.length <5"
+              block outline>
+              LOGIN
+            </button>
+          
+          </ion-list>
+         <!-- <b>OR</b>
+          
+          <button ion-button color="facebook" icon-left block>
+            <ion-icon name="logo-facebook"></ion-icon>
+            <div>Login with Facebook</div>
+          </button>
+        
+          <button ion-button color="danger" icon-left block>
+            <ion-icon name="logo-google"></ion-icon>
+            <div>Login with Google</div>
+          </button>
+      </ion-list>
+      
+    </ion-card-content>
+
+  </ion-card>
+
+  <button ion-button color="twitter" clear medium
+  (click)="navigateRegister()">
+    Registrate
+  </button>
+</ion-content>
+-->
+

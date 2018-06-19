@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar color="dark" >
+    <ion-title color="light">{{producto.categoria}}</ion-title>
+    <ion-buttons end>
+        <button (click)="comoLlegar()">
+          <ion-icon name="navigate" color="danger"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content fullscreen scroll="false" class="profile">
+  <!-- <ion-card>
+    <img src="http://localhost:8082/rest/public/img/imagenes/{{ producto.codigo }}.jpg">
+  </ion-card>
+
+  <div>
+    <br>
+    <h2 style="color:rgb(20, 131, 228)">{{producto.lugar}}</h2>
+    <br>
+    <p style="color:rgb(20, 131, 228)" align="left">
+      {{producto.descripcion}}
+    </p>
+  </div>
+
+  <div>
+    <br>
+    <h4 style="color:rgb(20, 131, 228)">Horarios de atencion: Lun-Vie: 8am-5pm</h4>
+  </div> -->
+
+    <ion-card class="card" >
+        <ion-card class="title">
+            <img src="http://localhost:8082/rest/public/img/imagenes/{{ producto.codigo }}.jpg">
+        </ion-card>
+
+      <div class="content">
+        <h2>{{producto.lugar}}</h2><br>
+        <h3>{{producto.descripcion}}</h3><br>
+        <h2>{{producto.direccion}}</h2>
+        <h2>Horario de atencion: {{producto.atencion}}</h2>
+      </div>
+        <button ion-button block icon-left (click)="comoLlegar()" color="twitter">
+          <ion-icon name="location"></ion-icon>
+          Como Llegar
+        </button>
+ 
+    </ion-card>
+
+
+
+</ion-content>

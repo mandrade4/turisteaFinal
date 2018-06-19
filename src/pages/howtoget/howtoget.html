@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="goBack()">
+        <!-- <ion-icon name="arrow-back"></ion-icon> -->
+      </button>
+    </ion-buttons>
+    <ion-title color="light">Como Llegar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div id="map"></div>
+  
+  <ion-scroll scrollY="true" class="scroll">
+  <div padding-horizontal id="panel"></div>
+  </ion-scroll>
+
+</ion-content>
