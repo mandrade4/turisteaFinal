@@ -7,6 +7,12 @@
                 <ion-icon name="arrow-back"></ion-icon>
             </button>
         </ion-buttons>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="centerMap()" id="nbutton">
+                <!-- <ion-icon name="options"></ion-icon> -->
+                <ion-icon name="locate"></ion-icon>
+            </button>
+        </ion-buttons>
         <ion-title>Cerca de mi</ion-title>
     </ion-navbar>
 
@@ -16,5 +22,8 @@
 <ion-content>
 
     <div id="map"></div>
+    <div id="legend">
+        <h3>Leyenda</h3>
+    </div>
 
 </ion-content>

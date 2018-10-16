@@ -14,12 +14,23 @@
 
 <ion-content>
 
-  <ion-list>
+  <!-- <ion-list>
 
     <button ion-item *ngFor="let categoria of ps.lineas" [navPush]="porCategorias" [navParams]="{ categoria : categoria }">
       <ion-icon [name]="categoria.icono" item-left></ion-icon>
       {{ categoria.linea }}
     </button>
 
-  </ion-list>
+  </ion-list> -->
+  <ion-grid> 
+    <ion-row>
+      <ion-col col-4 *ngFor="let categoria of ps.lineas" text-center>
+        <button ion-item  [navPush]="porCategorias" [navParams]="{ categoria : categoria }" >
+          <ion-icon > <img src="{{categoria.icono}}"  width="60" alt="Categorias" ></ion-icon>
+        </button> 
+        {{ categoria.nombre }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

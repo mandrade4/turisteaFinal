@@ -29,7 +29,7 @@ export class SearchplacePage {
     let valor = ev.target.value;
     console.log(valor);
 
-    this.ps.buscar_producto( valor );
+    //this.ps.buscar_producto( valor );
   }
 
 }

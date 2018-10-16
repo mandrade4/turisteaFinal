@@ -1,3 +1,6 @@
+
+import { FavoritosPage } from './../pages/favoritos/favoritos';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -16,6 +19,12 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http'; 
 
 import { IonicStorageModule } from "@ionic/storage";
+
+import { SuperTabsModule } from "ionic2-super-tabs";
+
+import { IonicImageViewerModule } from "ionic-img-viewer";
+
+
 
 /*
 * NATIVE LIBRARIES
@@ -36,6 +45,8 @@ import {  CategoriesPage,
           TabsPage,
           PercategoriesPage  
         } from "../pages/index.pages";
+import { FavoritosProvider } from '../providers/favoritos/favoritos';
+import { IniciarsesionPage } from '../pages/iniciarsesion/iniciarsesion';
 
 
 
@@ -54,13 +65,17 @@ import {  CategoriesPage,
     RegisterPage,
     SearchplacePage,
     TabsPage,
-    PercategoriesPage
+    PercategoriesPage,
+    FavoritosPage,
+    IniciarsesionPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    SuperTabsModule,
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -77,7 +92,9 @@ import {  CategoriesPage,
     RegisterPage,
     SearchplacePage,
     TabsPage,
-    PercategoriesPage
+    PercategoriesPage,
+    FavoritosPage,
+    IniciarsesionPage
   ],
   providers: [
     StatusBar,
@@ -88,7 +105,8 @@ import {  CategoriesPage,
     HttpClient,
     Geolocation,
     UsuarioProvider,
-    Storage
+    Storage,
+    FavoritosProvider
   ]
 })
 export class AppModule {}

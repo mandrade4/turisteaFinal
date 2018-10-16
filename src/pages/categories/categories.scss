@@ -1,3 +1,13 @@
 page-categories {
+    @import url(https://fonts.googleapis.com/css?family=Acme);
+    .title {
+      font-size: 2em;
 
+      text-transform: uppercase;
+      margin: 0;
+      font-family: 'Acme', sans-serif;
+    }
+    ion-col{
+        font-family: 'Acme', sans-serif;
+    }
 }

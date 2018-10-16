@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { HomePage, RegisterPage } from '../index.pages';
 import { AlertController } from 'ionic-angular';
+import { IniciarsesionPage } from '../iniciarsesion/iniciarsesion';
 
 
 
@@ -45,15 +46,21 @@ export class LoginPage {
 
   ingresar () {
 
-    this._us.ingresar(this.correo,this.contrasena)
-            .subscribe(()=>{
+    // this._us.ingresar(this.correo,this.contrasena)
+    //         .subscribe(()=>{
 
-              if (this._us.activo()){
-                this.navCtrl.setRoot(TabsPage);
-              } 
+    //           if (this._us.activo()){
+    //             this.navCtrl.setRoot(TabsPage);
+    //           } 
               
-            })
+    //         })
 
+  this.navCtrl.setRoot(TabsPage);
+
+  }
+
+  iniciarSesion(){
+    this.navCtrl.push(IniciarsesionPage);
   }
 
 

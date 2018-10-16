@@ -1,3 +1,11 @@
 page-searchplace {
-
+    @import url(https://fonts.googleapis.com/css?family=Acme);
+    .title {
+      font-size: 2em;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 0;
+      font-family: 'Acme', sans-serif;
+    }
+    
 }

@@ -1,0 +1,60 @@
+<ion-header>
+
+  <!-- <ion-navbar align-title="center">
+    <ion-title>Favoritos!</ion-title>
+
+    <ion-buttons>
+      <button ion-button (click)="viewCtrl.dismiss()">
+        Cerrar
+      </button>
+    </ion-buttons>
+  </ion-navbar> -->
+  <ion-navbar color="dark">
+    <a class="brand" style="color:white">
+      Favoritos!
+    </a>
+    <!-- <ion-title class="titleicon" style="display:inline-block"></ion-title> -->
+    <ion-buttons end>
+      <button ion-button icon-only (click)="viewCtrl.dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <div text-center *ngIf="fP.items.length === 0" class="carrito_vacio">
+
+    <ion-icon class="icon-5x">
+      <img src="../../assets/icon/heartb.png">
+    </ion-icon>
+    <br> No tiene lugares favoritos agregados
+  </div>
+
+  <div *ngIf="fP.items.length != 0">
+
+    <ion-grid>
+      <ion-row *ngFor="let item of fP.items; let i = index;" [navPush]="profilePage" [navParams]="{ producto : item }">
+        <ion-col>
+          <img src="{{item.image}}">
+        </ion-col>
+        <ion-col>
+
+          <p>{{ item.nombre }}</p>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <hr>
+
+
+
+
+  </div>
+
+
+
+</ion-content>

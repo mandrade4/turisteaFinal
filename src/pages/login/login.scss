@@ -2,28 +2,37 @@ page-login {
     .background{
         width: 100%;
         height: 100%;
-        background: linear-gradient(20deg,rgb(118, 15, 187),rgb(235, 162, 7));
+        //background: linear-gradient(20deg,rgb(118, 15, 187),rgb(235, 162, 7));
     }
+    .bg-image{
+        background-image: url('https://res.cloudinary.com/dip46a6en/image/upload/v1535680692/Aplicacion/Lugares/WhatsApp_Image_2018-08-30_at_20.50.17.jpg');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
+    .bt1{
+        width: 75%;
+        min-width: 75%;
+    }
+    
 }
 
-.scroll-content{
-    text-align: center;
-}
 
-ion-card.card{
-    background: rgba(232,230,230,0.6px);
-    border-radius:10px;
-}
 
-.item{
-    background: rgba(232,230,230,0px);
-}
+// ion-card.card{
+//     background: rgba(232,230,230,0.6px);
+//     border-radius:10px;
+// }
+
+// .item{
+//     background: rgba(232,230,230,0px);
+// }
 
 
 
-h1{
-    color: #ffffff;
-    font-size: 3em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: lighter;
-}
+// h1{
+//     color: #ffffff;
+//     font-size: 3em;
+//     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+//     font-weight: lighter;
+// }

@@ -1,9 +1,15 @@
 <ion-header>
 
   <ion-navbar color="dark">
-    <ion-buttons left>
+    <ion-buttons right>
       <button ion-button icon-only (click)="goBack()">
         <!-- <ion-icon name="arrow-back"></ion-icon> -->
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="muestraOculta('panel')" id="nbutton">
+        <!-- <ion-icon name="options"></ion-icon> -->
+        <h4> Ocultar Info</h4>
       </button>
     </ion-buttons>
     <ion-title color="light">Como Llegar</ion-title>
@@ -14,10 +20,24 @@
 
 <ion-content>
 
-  <div id="map"></div>
-  
+  <div id="map">
+
+  </div>
+  <!-- <button (click)='centerMap();' ion-button clear large color="dark" icon-only>
+    <ion-icon name="ios-navigate"></ion-icon>
+  </button> -->
+
+  <!-- <ion-fab right bottom class="comollegar" (click)="muestraOculta('panel')">
+    <button ion-fab color="dark" id="but">
+      <ion-icon name="ios-navigate">
+       
+      </ion-icon>
+    </button>
+  </ion-fab> -->
+
+ 
   <ion-scroll scrollY="true" class="scroll">
-  <div padding-horizontal id="panel"></div>
+    <div padding-horizontal id="panel"></div>
   </ion-scroll>
 
 </ion-content>

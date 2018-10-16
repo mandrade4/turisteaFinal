@@ -1,7 +1,10 @@
+import { SuperTabsModule } from 'ionic2-super-tabs';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { NextomePage, CategoriesPage, SearchplacePage, HomePage } from "../index.pages";
+
+
 /**
  * Generated class for the TabsPage page.
  *

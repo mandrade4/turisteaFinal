@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar color = "twitter">
+  <ion-navbar color="dark">
     <ion-title>{{categoria.linea}}</ion-title>
   </ion-navbar>
 
@@ -8,17 +8,22 @@
 
 
 <ion-content padding>
-    <ion-list>
-        <ion-item *ngFor="let item of ps.por_categoria">
-          <ion-thumbnail item-left>
-            <img src="http://localhost:8082/rest/public/img/imagenes/{{ item.codigo }}.jpg">
-          </ion-thumbnail>
-          <h2>{{ item.lugar }}</h2>
-          <button ion-button clear item-right
-                  [navPush]="profilePage"
-                  [navParams]="{ producto: item }">
-            Ver
-          </button>
-        </ion-item>
-      </ion-list>
+  <!-- <ion-list>
+    <ion-item *ngFor="let item of ps.por_categoria2">
+      <ion-thumbnail item-left>
+        <img src="http://localhost:8082/rest/public/img/perfil/{{ item.codigo}}.jpg" [navPush]="profilePage" [navParams]="{ producto: item }">
+      </ion-thumbnail>
+      <h2 [navPush]="profilePage" [navParams]="{ producto: item }">{{ item.lugar }}</h2>
+
+    </ion-item>
+  </ion-list> -->
+
+  <div class="homebox" *ngFor="let item of ps.por_categoria2" [navPush]="profilePage" [navParams]="{ producto : item }">
+      <a href="Menu" ><img src="{{item.image}}" style="height: 230 !important;" height="200"  alt=""><br>
+          <div class="box-content">{{item.nombre}} </div>
+      </a>
+      <br>
+  </div>
+  <br>
+
 </ion-content>

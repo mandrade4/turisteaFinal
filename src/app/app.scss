@@ -15,7 +15,7 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 .menu{
-  background-color: grey;
+  background-color: rgb(255, 255, 255);
 }
 .primary-bg {
   background-color: color($colors, primary) !important;
@@ -51,6 +51,7 @@
 
 .profile-bg {
   background-image: linear-gradient(135deg, color($colors, dark), color($colors, primary), color($colors, light));
+  //background-image: linear-gradient(135deg, light, #748067, #6B6EC4;
 }
 //
 //
@@ -77,7 +78,8 @@
 //
 .dark-trans,
 .toast-md .toast-wrapper {
-  background-color: rgba(0, 0, 0, .4);
+  //background-color: rgba(0, 0, 0, .4);
+  background: linear-gradient(20deg,rgb(118, 15, 187),rgb(235, 162, 7));
 }
 
 
@@ -277,7 +279,7 @@ ion-navbar.no-border {
   @extend .list-no-border;
 
   .item,
-  .item:first-child,
+  .item:first-child,  
   .item:last-child {
     border-bottom: 1px solid rgba(86, 61, 124, 0.2);
     .item-inner {
@@ -374,27 +376,12 @@ ion-navbar.no-border {
 
 // Menu user profile
 .user-profile {
-  .user-avatar {
-    width: 68px;
-    height: 68px;
-    display: inline-block;
-    border-radius: 50%;
-    box-shadow: inset 0 0 10rem rgba(0,0,0,.25), 0 0 4rem rgba(255,255,255,.45);
-    img {
-      border-radius: 50%;
-    }
-  }
+  
   .toolbar-background {
-    background-image: linear-gradient(150deg, color($colors, jade), color($colors, primary));
+    //background-image: linear-gradient(200deg, color($colors, danger2), color($colors, person));
+    background-image: linear-gradient(200deg, color($colors, person), color($colors, person));
   }
 
-  .other-data {
-    .column {
-      &:first-child {
-        border-right: 1px solid rgba(36, 50, 157, .25);
-      }
-    }
-  }
 }
 
 .user-list {

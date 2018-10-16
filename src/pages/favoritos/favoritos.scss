@@ -1,0 +1,11 @@
+page-favoritos {
+    @import url(https://fonts.googleapis.com/css?family=Acme);
+    .brand {
+        position: relative;
+        left: 30%;
+        margin-left: -95px !important;  /* 50% of your logo width */
+        display: block;
+        font-size: 2em;
+        font-family: 'Acme', sans-serif; 
+    }
+}

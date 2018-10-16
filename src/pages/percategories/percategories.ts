@@ -26,7 +26,7 @@ export class PercategoriesPage {
     //console.log(this.navParams.get("categoria"));
     this.categoria = this.navParams.get("categoria");
 
-    this.ps.cargar_por_categoria(this.categoria.id);
+    this.ps.cargar_por_cate(this.categoria._id);
  
   }
 
