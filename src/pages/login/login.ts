@@ -5,7 +5,7 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 import { HomePage, RegisterPage } from '../index.pages';
 import { AlertController } from 'ionic-angular';
 import { IniciarsesionPage } from '../iniciarsesion/iniciarsesion';
-
+import { LogueoPage } from '../logueo/logueo';
 
 
 @IonicPage()

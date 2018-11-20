@@ -19,18 +19,30 @@ export class PercategoriesPage {
 
   categoria:any = {};
   profilePage = PlaceprofilePage;
+  places:any;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
               private ps: PlacesProvider) {
     //console.log(this.navParams.get("categoria"));
     this.categoria = this.navParams.get("categoria");
-
+    this.places =[];
     this.ps.cargar_por_cate(this.categoria._id);
+    this.getPlacesByCategory();
  
   }
+  
 
   goTo(){
     this.navCtrl.push(this.profilePage);
+  }
+
+
+  getPlacesByCategory(){
+    this.ps.getPlaceByCategory(this.categoria._id).subscribe(
+      result => {
+        this.places = result;
+      }
+    )
   }
 }

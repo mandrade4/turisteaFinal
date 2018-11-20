@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar color="dark">
+  <ion-navbar color="skyblue">
     <ion-buttons left>
       <button ion-button icon-only>
         <ion-icon name="arrow-back"></ion-icon>
@@ -24,11 +24,11 @@
   </ion-list> -->
   <ion-grid> 
     <ion-row>
-      <ion-col col-4 *ngFor="let categoria of ps.lineas" text-center>
+      <ion-col col-4 *ngFor="let categoria of categories" text-center>
         <button ion-item  [navPush]="porCategorias" [navParams]="{ categoria : categoria }" >
-          <ion-icon > <img src="{{categoria.icono}}"  width="60" alt="Categorias" ></ion-icon>
+          <ion-icon > <img src="{{categoria.icon}}"  width="60" alt="Categorias" ></ion-icon>
         </button> 
-        {{ categoria.nombre }}
+        {{ categoria.name }}
       </ion-col>
     </ion-row>
   </ion-grid>

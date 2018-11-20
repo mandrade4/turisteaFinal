@@ -27,12 +27,6 @@ export class PlaceprofilePage {
       console.log("Perfil de Lugar");
       console.log(this.navParams.get("Producto"));
       this.producto = this.navParams.get("producto");
-      console.log(this.producto.nombre);
-      console.log(this.producto.descripcion);
-      console.log(this.producto.telefono);
-      console.log(this.producto.website);
-      console.log(this.producto.direccion);
-      //this.navCtrl.push()
   }
 
   ionViewDidLoad() {
@@ -55,11 +49,4 @@ export class PlaceprofilePage {
     toast.present();
   }
 
-  next() {
-    this.slides.slideNext();
-  }
-
-  prev() {
-    this.slides.slidePrev();
-  }
 }

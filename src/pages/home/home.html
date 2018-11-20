@@ -1,46 +1,28 @@
 <ion-header no-border>
-  <ion-navbar color="dark">
-    <a class="brand">
-      <img src="https://res.cloudinary.com/dip46a6en/image/upload/v1535061243/turisteape.png" width="200px" height="50px" />
-    </a>
-    <!-- <ion-title class="titleicon" style="display:inline-block"></ion-title> -->
-    <ion-buttons start>
-        <button ion-button icon-only (click)="fP.ver_carrito()">
-          <ion-icon name="heart"></ion-icon>
-          <ion-badge color="danger" class="favorito-numero" *ngIf="fP.items.length > 0">{{fP.items.length}}</ion-badge>
-        </button>
-        &nbsp;
-        &nbsp;
-      </ion-buttons>
+  <ion-navbar color="skyblue">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lugares</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content class="card-background-page">
 
-
-  <div class="homebox" *ngFor="let item of _ps.lugares" [navPush]="profilePage" [navParams]="{ producto : item }">
-    
-    <a href="Menu">
-      <!-- <img src="http://localhost:8082/rest/public/img/perfil/{{ item.codigo}}.jpg" style="height: 230 !important;" height="200"> -->
-      <img src="{{item.image}}" style="height: 230 !important;" height="200">
-      <br>
-      <br>
-      <div class="box-content">{{item.nombre}} </div>
-    </a>
-
-  </div>
+  <ion-content class="card-background-page">
+    <div *ngFor="let item of places" [navPush]="profilePage" [navParams]="{ producto : item }">
+      <ion-card>
+        <img src="{{item.image}}" />
+        <div class="card-title">{{item.name}}</div>
+      </ion-card>
+    </div>
+  </ion-content>
 
 
   <ion-infinite-scroll (ionInfinite)="siguiente_pagina($event)">
     <ion-infinite-scroll-content></ion-infinite-scroll-content>
   </ion-infinite-scroll>
 
-  <!-- <ion-slides class="image-slider" loop="true" slidesPerView="2">
-    <ion-slide *ngFor="let img of images">
-      <img src="../../assets/imgs/prueba/{{img}}" class="thumb-img" imageViewer>
-    </ion-slide>
-  </ion-slides> -->
 
 </ion-content>

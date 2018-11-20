@@ -20,14 +20,16 @@ export class HomePage {
   categoriePage = CategoriesPage;
   images = ['1.jpg','2.jpg','3.jpg','4.jpg'];
   categorias =['Museos','Iglesias','Restaurantes','Discotecas y bares','Centros comerciales','Bancos','Destinos Turisticos'];
-
+  places:any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
               public _ps: PlacesProvider, private _us:UsuarioProvider, private fP: FavoritosProvider) {
+                this.places = [];
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PrincipalPage');
+    this.getPlaces();
     //console.log(_ps.lugares[0]);
   }
 
@@ -36,12 +38,26 @@ export class HomePage {
   }
 
   siguiente_pagina(infiniteScroll){
-    this._ps.cargar_todos()
+    this._ps.cargar_todos2()
           .then( ()=>{
 
             infiniteScroll.complete();
 
           })
+  }
+
+
+  getPlaces(){
+    this._ps.getPlaces().subscribe(
+      result => {
+        this.places = result.lugares;
+        console.log(result);
+      }
+    )
+  }
+
+  getPlaceId(){
+
   }
 
 }

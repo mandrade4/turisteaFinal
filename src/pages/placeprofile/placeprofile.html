@@ -1,99 +1,55 @@
 <ion-header>
 
-  <ion-navbar color="dark">
-    <ion-title color="light">{{producto.categoria.nombre}}</ion-title>
-    <!-- <ion-buttons end>
-      <button (click)="comoLlegar()">
-        <ion-icon name="navigate" color="danger"></ion-icon>
+    <ion-navbar color="skyblue">
+      <!-- <ion-title color="light">{{producto.categoria.nombre}}</ion-title> -->
+      <!-- <ion-buttons end>
+        <button (click)="comoLlegar()">
+          <ion-icon name="navigate" color="danger"></ion-icon>
+        </button>
+      </ion-buttons> -->
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content fullscreen class="profile">
+  
+    <div class="box-wrapper">
+      <img src="{{producto.image}}" alt="rhcp" />
+  
+  
+  
+      <div class="box-content">
+        <a class="buy">
+          <span>
+            <ion-icon>
+              <img src="https://image.flaticon.com/user_icons/8160/8160503/1531462084.svg" height="55" width="42" id="papu" (click)="fP.agregar_favorito(producto)">
+            </ion-icon>
+          </span>
+        </a>
+        <br>
+        <div class="title">{{producto.name}}</div>
+        <!-- <div class="categoria">{{producto.categoria.nombre}}</div> -->
+        <br>
+        <div class="desc">{{producto.description}}</div>
+        <span class="price">{{producto.phone}}</span>
+        <span class="price">{{producto.website}}</span>
+        <!-- <span class="price">{{producto.direccion}}</span> -->
+        <br>  
+        <div class="footer"></div>
+      </div>
+      </div>
+  <!-- <div>
+    MEJORAR VISTAS DE FAVORITOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOS
+  </div> -->
+  
+    <ion-fab right bottom class="comollegar" (click)=comoLlegar()>
+      <button ion-fab color="dark">
+        <ion-icon>
+          <img src="../../../assets/icon/navigation.png">
+        </ion-icon>
       </button>
-    </ion-buttons> -->
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content fullscreen class="profile">
-
-  <!-- <ion-slides class="image-slider" loop="true" style="width:auto;height:auto;margin:auto;display:block">
-      <ion-slide *ngFor="let img of images">
-        <img height="230" src="../../assets/imgs/catalina/{{img}}" class="thumb-img" imageViewer>
-      </ion-slide>
-    </ion-slides>
-  <ion-card>
-
-
-    <ion-card-content text-justify>
-      <div class="black">
-        <h1 text-capitalize>{{producto.lugar}}</h1>
-      </div>
-      {{producto.descripcion}}
-    </ion-card-content>
-
-    <ion-grid>
-      <ion-row>
-        <ion-col small text-left>Telefono </ion-col>
-        <ion-col text-left>
-          <a>{{producto.atencion}}</a>
-        </ion-col>
-      </ion-row>
-
-      <ion-row>
-        <ion-col text-left>Website </ion-col>
-        <ion-col text-left>www.ejemplo.com </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col text-left>Direccion </ion-col>
-        <ion-col text-left>{{producto.direccion}} </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card> -->
-
-  <div class="box-wrapper">
-    <img src="{{producto.image}}" alt="rhcp" />
-    <!-- <div *ngIf="producto.lugar=='Monasterio de Santa Catalina'">
-      <ion-slides class="image-slider" loop="true" style="width:auto;height:auto;margin:auto;display:block" [pager]="{pager:true}">
-        <ion-slide *ngFor="let img of images">
-          <img height="230" src="../../assets/imgs/catalina/{{img}}" class="thumb-img" imageViewer>
-        </ion-slide>
-
-      </ion-slides>
-    </div>
-    
-    <div *ngIf="producto.lugar!='Monasterio de Santa Catalina'">
-        <img src="http://localhost:8082/rest/public/img/perfil/10.jpg" class="thumb-img" imageViewer>
-    </div> -->
-
-    <div class="box-content">
-      <a class="buy">
-        <span>
-          <ion-icon>
-            <img src="https://image.flaticon.com/user_icons/8160/8160503/1531462084.svg" height="55" width="42" id="papu" (click)="fP.agregar_favorito(producto)">
-          </ion-icon>
-        </span>
-      </a>
-      <br>
-      <div class="title">{{producto.nombre}}</div>
-      <br>
-      <div class="desc">{{producto.descripcion}}</div>
-      <span class="price">{{producto.telefono}}</span>
-      <span class="price">{{producto.website}}</span>
-      <span class="price">{{producto.direccion}}</span>
-      <br>  
-      <div class="footer">
-      </div>
-    </div>
-    </div>
-<!-- <div>
-  MEJORAR VISTAS DE FAVORITOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOS
-</div> -->
-
-  <ion-fab right bottom class="comollegar" (click)=comoLlegar()>
-    <button ion-fab color="dark">
-      <ion-icon>
-        <img src="../../../assets/icon/navigation.png">
-      </ion-icon>
-    </button>
-  </ion-fab>
-
-
-</ion-content>
+    </ion-fab>
+  
+  
+  </ion-content>

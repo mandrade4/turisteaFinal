@@ -426,12 +426,6 @@ export class NextomePage {
             position: posicionLugar,
             map: this.map,
             disableAutoPan: false,
-            // label: { 
-            //   text: element.lugar,
-            //   color: "white",
-            //   fontSize: "10px",
-            //   labelClass: "my-custom-class-for-label"
-            // },
             animation: google.maps.Animation.DROP,
             title: element.nombre,
             icon: {

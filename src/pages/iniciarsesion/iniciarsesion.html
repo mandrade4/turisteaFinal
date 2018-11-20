@@ -1,4 +1,32 @@
-
 <ion-content padding class="bg-image">
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <ion-label floating>
+        <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+        Usuario
+    </ion-label>
+    <ion-input type="email"></ion-input>
+
+    <ion-label floating>
+        <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+        Contrasena
+    </ion-label>
+    <ion-input type="password"></ion-input>
+
+    <br>
+    <br>
+
+    <div>
+        <button ion-button icon-start block color="skyblue" tappable (click)="login()">
+            <ion-icon name="log-in"></ion-icon>
+            Iniciar Sesion
+        </button>
+
+    </div>
+
 
 </ion-content>

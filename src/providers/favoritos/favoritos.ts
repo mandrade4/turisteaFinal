@@ -39,17 +39,17 @@ export class FavoritosProvider {
     });
     toast.present();
     this.items.push(item_parametro);
-    this.guardar_storage();
+    // this.guardar_storage();
   }
 
-  guardar_storage() {
-    if (this.platform.is("cordova")) {
-      this.storage.set('items', this.items);
-    } else {
-      //localStorage.set("item",JSON.stringify(this.items));
-      localStorage.item = this.items;
-    }
-  }
+  // guardar_storage() {
+  //   if (this.platform.is("cordova")) {
+  //     this.storage.set('items', this.items);
+  //   } else {
+  //     //localStorage.set("item",JSON.stringify(this.items));
+  //     localStorage.item = this.items;
+  //   }
+  // }
 
   cargar_storage() {
 

@@ -47,6 +47,7 @@ import {  CategoriesPage,
         } from "../pages/index.pages";
 import { FavoritosProvider } from '../providers/favoritos/favoritos';
 import { IniciarsesionPage } from '../pages/iniciarsesion/iniciarsesion';
+import { LogueoPage } from '../pages/logueo/logueo';
 
 
 
@@ -67,7 +68,8 @@ import { IniciarsesionPage } from '../pages/iniciarsesion/iniciarsesion';
     TabsPage,
     PercategoriesPage,
     FavoritosPage,
-    IniciarsesionPage
+    IniciarsesionPage,
+    LogueoPage
   ],
   imports: [
     BrowserModule,
@@ -94,7 +96,8 @@ import { IniciarsesionPage } from '../pages/iniciarsesion/iniciarsesion';
     TabsPage,
     PercategoriesPage,
     FavoritosPage,
-    IniciarsesionPage
+    IniciarsesionPage,
+    LogueoPage
   ],
   providers: [
     StatusBar,

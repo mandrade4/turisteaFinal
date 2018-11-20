@@ -13,14 +13,25 @@ import { PercategoriesPage } from "../index.pages";
 export class CategoriesPage {
 
   porCategorias = PercategoriesPage;
+  categories:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private ps: PlacesProvider) {
  
- 
+    this.categories = [];
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CategoriasPage');
+    this.getCategories();
+  }
+
+  getCategories(){
+    this.ps.getCategories().subscribe(
+      (result)=>{
+        this.categories = result.categorias;
+        console.log(result);
+      }
+    )
   }
 
 }

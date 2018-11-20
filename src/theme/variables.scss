@@ -22,21 +22,6 @@ $app-direction: ltr;
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
-.favoritos_vacio{
-  position:relative; 
-  top:30%;
-  font-size: 20px;
-}
-
-.icon-5x{
-  font-size:100px
-}
-
-.favorito-numero{
-  position:absolute;
-  top: -5px;
-  left: 18px;
-}
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -57,7 +42,7 @@ $colors: (
   plomo:      #37413d,
   person:     #1e1b26,
   danger2:     #fe4141,
-  //naranja:    #3711
+  skyblue:     	#0091ac
 );
 
 

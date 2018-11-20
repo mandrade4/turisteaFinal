@@ -1,13 +1,13 @@
 <ion-header>
 
-  <ion-navbar color="dark">
-    <ion-title>{{categoria.linea}}</ion-title>
+  <ion-navbar color="skyblue">
+    <ion-title>{{categoria.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="card-background-page">
   <!-- <ion-list>
     <ion-item *ngFor="let item of ps.por_categoria2">
       <ion-thumbnail item-left>
@@ -18,12 +18,21 @@
     </ion-item>
   </ion-list> -->
 
-  <div class="homebox" *ngFor="let item of ps.por_categoria2" [navPush]="profilePage" [navParams]="{ producto : item }">
+  <!-- <div class="homebox" *ngFor="let item of places" [navPush]="profilePage" [navParams]="{ producto : item }">
       <a href="Menu" ><img src="{{item.image}}" style="height: 230 !important;" height="200"  alt=""><br>
-          <div class="box-content">{{item.nombre}} </div>
+          <div class="box-content">{{item.name}} </div>
       </a>
       <br>
   </div>
-  <br>
+  <br> -->
+
+  <ion-content class="homebox">
+      <div *ngFor="let item of places" [navPush]="profilePage" [navParams]="{ producto : item }">
+        <ion-card>
+          <img src="{{item.image}}" />
+          <div class="card-title">{{item.name}}</div>
+        </ion-card>
+      </div>
+    </ion-content>
 
 </ion-content>
